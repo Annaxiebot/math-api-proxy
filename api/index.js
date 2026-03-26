@@ -3,10 +3,11 @@
 // API key must be set in Vercel Environment Variables
 
 module.exports = async (req, res) => {
-  // Enable CORS
+  // Enable CORS - IMPORTANT: Allow all headers the browser might send
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+  res.setHeader('Access-Control-Max-Age', '86400');
 
   // Handle preflight
   if (req.method === 'OPTIONS') {
