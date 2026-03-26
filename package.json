@@ -1,0 +1,6 @@
+{
+  "name": "math-api-proxy",
+  "version": "1.0.0",
+  "description": "Secure API proxy for Mickey's Math Tutor - NO API keys in code!",
+  "main": "api/index.js"
+}
